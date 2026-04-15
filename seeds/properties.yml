@@ -1,0 +1,101 @@
+version: 2
+
+seeds:
+  - name: monster_core
+    columns:
+      - name: monster_id
+        description: Unique ID value; primary key
+        data_tests:
+          - unique
+          - not_null
+      - name: monster_name
+        description: Creature Name
+        data_tests:
+          - not_null
+      - name: cr
+        description: The Challenge Rating for the creature
+        data_tests:
+          - not_null
+      - name: xp
+        description: The amount of Experience Points awarded
+        data_tests:
+          - not_null
+      - name: race
+        description: The race of the creature
+        data_tests:
+          - not_null
+      - name: class
+        description: The type of creature
+        data_tests:
+          - not_null
+      - name: level
+        description: The experience of the creature
+        data_tests:
+          - not_null
+      - name: alignment
+        description: The lawful and ordered position of the creature
+        data_tests:
+          - not_null
+      - name: size
+        description: the size of the creature
+        data_tests:
+          - not_null
+      - name: type
+        description: shrug
+        data_tests:
+          - not_null
+  - name: monster_stats
+    columns:
+      - name: monster_id
+        description: Unique ID value; primary key
+        data_tests:
+          - not_null
+          - unique
+      - name: str
+        description: Numeric represtation of the creature's physical might
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              name: Check_STR_is_Numeric
+              arguments:
+                expression: "RLIKE '^[0-9]+$'"
+      - name: dex
+        description: Numeric representation of the creature's deftness
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              name: Check_DEX_is_Numeric
+              arguments:
+                expression: "RLIKE '^[0-9]+$'"
+      - name: con
+        description: Numeric representation of the creature's heartiness
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              name: Check_CON_is_Numeric
+              arguments:
+                expression: "RLIKE '^[0-9]+$'"
+      - name: int
+        description: Numeric representation of the creature's ability to reason
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              name: Check_INT_is_Numeric
+              arguments:
+                expression: "RLIKE '^[0-9]+$'"
+      - name: wis
+        description: Numeric representation of the creature's intuition
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              name: Check_WIS_is_Numeric
+              arguments:
+                expression: "RLIKE '^[0-9]+$'"
+      - name: cha
+        description: Numeric representation of the creature's force of personality
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              name: Check_CHA_is_Numeric
+              arguments:
+                expression: "RLIKE '^[0-9]+$'"
