@@ -1,0 +1,2 @@
+monster_id,str,dex,con,int,wis,cha
+goblin_001,11,15,12,10,9,6
