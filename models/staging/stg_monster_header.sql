@@ -29,7 +29,7 @@ select
     base_header.race,
     base_header.level,
     base_header.alignment,
-    (base_header.improved_initiative_bonus + base_header.dex_mod) as initiative_modifer,
+    (base_header.improved_initiative_bonus + base_header.dex_mod) as initiative_modifier,
     base_header.darkvision,
     base_header.perception_modifier
 from base_header

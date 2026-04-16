@@ -33,7 +33,7 @@ models:
       - name: alignment
         data_tests:
           - not_null
-      - name: initiative_modifer
+      - name: initiative_modifier
         data_tests:
           - not_null
       - name: darkvision
