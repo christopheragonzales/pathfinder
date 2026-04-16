@@ -1,9 +1,44 @@
 version: 2
 
 models:
-  - name: stg_monster_base
+  - name: stg_monster_header
     columns:
       - name: monster_id
         data_tests:
           - not_null
           - unique
+      - name: monster_name
+        description: |
+          For the page name itself we use the Formal format, whereas in the blue header at
+          the top of the page we use the “conversational” or informal name. That is, in
+          the case of a dire wolf, the page name would be Wolf, Dire.
+        data_tests:
+          - not_null
+      - name: challenge_rating
+        description: |
+          The monster’s CR (challenge rating) is a numerical indication of how dangerous it
+          is—the higher the number, the deadlier the creature.
+        data_tests:
+          - not_null
+      - name: experience_points
+        description: The total experience points that PCs earn for defeating the monster.
+        data_tests:
+          - not_null
+      - name: race
+        data_tests:
+          - not_null
+      - name: level
+        data_tests:
+          - not_null
+      - name: alignment
+        data_tests:
+          - not_null
+      - name: initiative_modifier
+        data_tests:
+          - not_null
+      - name: darkvision
+        data_tests:
+          - not_null
+      - name: perception_modifier
+        data_tests:
+          - not_null
