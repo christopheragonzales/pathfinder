@@ -44,6 +44,28 @@ seeds:
         description: shrug
         data_tests:
           - not_null
+
+  - name: monster_senses
+    columns:
+      - name: monster_id
+        description: Unique ID value; primary key
+        data_tests:
+          - not_null
+          - unique
+      - name: darkvision
+        description: |
+          A creature with darkvision can see in total darkness, usually to a 
+          range of 60 feet. Within this range, the creature can see as clearly 
+          as a sighted creature could see in an area of bright light. Darkvision 
+          is black and white only but otherwise like normal sight.
+        data_tests:
+          - not_null
+      - name: perception_mod
+        description: |
+          Value that raises or lowers the perception value
+        data_tests:
+          - not_null
+
   - name: monster_stats
     columns:
       - name: monster_id
@@ -99,3 +121,13 @@ seeds:
               name: Check_CHA_is_Numeric
               arguments:
                 expression: "RLIKE '^[0-9]+$'"
+
+  - name: monster_feats
+    columns:
+      - name: monster_id
+        data_tests:
+          - not_null
+          - unique
+      - name: improved_initiative
+        data_tests:
+          - not_null
