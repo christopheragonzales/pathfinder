@@ -1,0 +1,2 @@
+armor_id,armor_name,cost,armor_bonus,max_dex_bonus,armor_check_penalty,arcane_spell_fail_chance,speed_30,speed_20,weight
+light_leather_001,leather,10,2,6,0,0.1,30,20,15

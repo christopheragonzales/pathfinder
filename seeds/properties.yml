@@ -1,6 +1,48 @@
 version: 2
 
 seeds:
+  - name: armor_bonuses
+    columns:
+      - name: armor_id
+        data_tests:
+          - unique
+          - not_null
+      - name: armor_name
+        data_tests:
+          - not_null
+      - name: cost
+        data_tests:
+          - not_null
+      - name: armor_bonus
+        data_tests:
+          - not_null
+      - name: max_dex_bonus
+        data_tests:
+          - not_null
+      - name: armor_check_penalty
+        data_tests:
+          - not_null
+      - name: arcane_spell_fail_chance
+        data_tests:
+          - not_null
+      - name: speed_30
+        data_tests:
+          - not_null
+      - name: speed_20
+        data_tests:
+          - not_null
+      - name: weight
+        data_tests:
+          - not_null
+  - name: monster_to_armor
+    columns:
+      - name: monster_id
+        data_tests:
+          - unique
+          - not_null
+      - name: armor_id
+        data_tests:
+          - not_null
   - name: monster_core
     columns:
       - name: monster_id
@@ -44,7 +86,6 @@ seeds:
         description: shrug
         data_tests:
           - not_null
-
   - name: monster_senses
     columns:
       - name: monster_id
@@ -65,7 +106,6 @@ seeds:
           Value that raises or lowers the perception value
         data_tests:
           - not_null
-
   - name: monster_stats
     columns:
       - name: monster_id
@@ -160,7 +200,6 @@ seeds:
               name: Check_CHA_is_Numeric
               arguments:
                 expression: "RLIKE '^[0-9]+$'"
-
   - name: monster_feats
     columns:
       - name: monster_id

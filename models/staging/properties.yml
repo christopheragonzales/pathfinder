@@ -1,6 +1,7 @@
 version: 2
 
 models:
+  - name: stg_monster_armor
   - name: stg_monster_header
     columns:
       - name: monster_id

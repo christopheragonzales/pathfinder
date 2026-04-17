@@ -51,6 +51,18 @@ models:
 
 seeds:
   pathfinder:
+    armor_bonuses:
+      +database: pathfinder
+      +enabled: true
+      +full_refresh: true
+      +schema: equipment
+      +tags: ["equipment", "armor", "seed"]
+    monster_to_armor:
+      +database: pathfinder
+      +enabled: true
+      +full_refresh: true
+      +schema: interaction
+      +tags: ["interaction", "armor", "monster", "seed"]
     monster_core:
       +database: pathfinder
       +enabled: true
