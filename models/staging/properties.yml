@@ -27,13 +27,19 @@ models:
       - name: race
         data_tests:
           - not_null
+      - name: monster_class
+        data_tests:
+          - not_null
       - name: level
         data_tests:
           - not_null
       - name: alignment
         data_tests:
           - not_null
-      - name: initiative_modifier
+      - name: improved_initiative
+        data_tests:
+          - not_null
+      - name: dex
         data_tests:
           - not_null
       - name: darkvision

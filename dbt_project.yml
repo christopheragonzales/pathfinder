@@ -44,6 +44,10 @@ models:
       +database: pathfinder
       +schema: staging
       +full_refresh: true
+    intermediate:
+      +database: pathfinder
+      +schema: intermediate
+      +full_refresh: true
 
 seeds:
   pathfinder:

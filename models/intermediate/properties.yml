@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: int_monster_header
+    columns:
+      - name: monster_id
+        data_tests:
+          - not_null
+      - name: monster_name
+        data_tests:
+          - not_null
+      - name: challenge_rating
+        data_tests:
+          - not_null
+      - name: experience_points
+        data_tests:
+          - not_null
+      - name: race
+        data_tests:
+          - not_null
+      - name: level
+        data_tests:
+          - not_null
+      - name: alignment
+        data_tests:
+          - not_null
+      - name: initiative_modifier
+        data_tests:
+          - not_null
+      - name: darkvision
+        data_tests:
+          - not_null
+      - name: perception_modifier
+        data_tests:
+          - not_null
